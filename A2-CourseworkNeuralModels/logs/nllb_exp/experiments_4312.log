@@ -1,0 +1,178 @@
+Running experiment: nllb
+Python: /home/alumno.upv.es/gdipal1/envs/ta-project/bin/python
+PyTorch version: 2.9.1+cu128
+CUDA available: True
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/torchmetrics/utilities/imports.py:23: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import DistributionNotFound, get_distribution
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 21465.22it/s]
+Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`
+Encoder model frozen.
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:197: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']
+DatasetDict({
+    test: Dataset({
+        features: ['translation'],
+        num_rows: 2000
+    })
+    train: Dataset({
+        features: ['translation'],
+        num_rows: 1000000
+    })
+    validation: Dataset({
+        features: ['translation'],
+        num_rows: 2000
+    })
+})
+ 3 3849
+ 4 22492
+ 5 33296
+ 6 42286
+ 7 48851
+ 8 53272
+ 9 54460
+10 50687
+11 46678
+12 41912
+13 36873
+14 33665
+15 28816
+16 502863
+ 3 3641
+ 4 21841
+ 5 33700
+ 6 41844
+ 7 48345
+ 8 53072
+ 9 53875
+10 50825
+11 46811
+12 42049
+13 37337
+14 33319
+15 29205
+16 504136
+/home/alumno.upv.es/gdipal1/MachineTranslation-UPV/A2-CourseworkNeuralModels/experiments_nllb.py:293: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Seq2SeqTrainer.__init__`. Use `processing_class` instead.
+  return Seq2SeqTrainer(
+{'loss': 1.3976, 'grad_norm': 0.4690451920032501, 'learning_rate': 2.5000800000000003e-05, 'epoch': 1.0}
+Using default tokenizer.
+{'eval_loss': 1.3554023504257202, 'eval_bleu': 29.8778, 'eval_rougeL': 0.5106, 'eval_chrf': 51.2989, 'eval_gen_len': 15.0815, 'eval_runtime': 30.7141, 'eval_samples_per_second': 65.117, 'eval_steps_per_second': 2.051, 'epoch': 1.0}
+{'loss': 1.3624, 'grad_norm': 0.48959845304489136, 'learning_rate': 8e-10, 'epoch': 2.0}
+Using default tokenizer.
+{'eval_loss': 1.3488153219223022, 'eval_bleu': 30.074, 'eval_rougeL': 0.5121, 'eval_chrf': 51.3847, 'eval_gen_len': 15.08, 'eval_runtime': 30.5822, 'eval_samples_per_second': 65.398, 'eval_steps_per_second': 2.06, 'epoch': 2.0}
+{'train_runtime': 7566.0589, 'train_samples_per_second': 264.338, 'train_steps_per_second': 8.261, 'train_loss': 1.379988375, 'epoch': 2.0}
+/home/alumno.upv.es/gdipal1/MachineTranslation-UPV/A2-CourseworkNeuralModels/experiments_nllb.py:293: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Seq2SeqTrainer.__init__`. Use `processing_class` instead.
+  return Seq2SeqTrainer(
+{'loss': 1.3814, 'grad_norm': 0.3455016613006592, 'learning_rate': 5.0001600000000006e-05, 'epoch': 1.0}
+Using default tokenizer.
+{'eval_loss': 1.3448946475982666, 'eval_bleu': 30.2537, 'eval_rougeL': 0.514, 'eval_chrf': 51.5455, 'eval_gen_len': 15.081, 'eval_runtime': 30.835, 'eval_samples_per_second': 64.861, 'eval_steps_per_second': 2.043, 'epoch': 1.0}
+{'loss': 1.3465, 'grad_norm': 0.3990648686885834, 'learning_rate': 1.6e-09, 'epoch': 2.0}
+Using default tokenizer.
+{'eval_loss': 1.336782693862915, 'eval_bleu': 30.6897, 'eval_rougeL': 0.516, 'eval_chrf': 51.7174, 'eval_gen_len': 15.086, 'eval_runtime': 30.7613, 'eval_samples_per_second': 65.017, 'eval_steps_per_second': 2.048, 'epoch': 2.0}
+{'train_runtime': 7544.5313, 'train_samples_per_second': 265.093, 'train_steps_per_second': 8.284, 'train_loss': 1.3639546875, 'epoch': 2.0}
+/home/alumno.upv.es/gdipal1/MachineTranslation-UPV/A2-CourseworkNeuralModels/experiments_nllb.py:293: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Seq2SeqTrainer.__init__`. Use `processing_class` instead.
+  return Seq2SeqTrainer(
+{'loss': 1.4239, 'grad_norm': 0.6006618738174438, 'learning_rate': 5.0001600000000006e-05, 'epoch': 1.0}
+Using default tokenizer.
+{'eval_loss': 1.4555227756500244, 'eval_bleu': 29.2129, 'eval_rougeL': 0.5066, 'eval_chrf': 50.9416, 'eval_gen_len': 15.3675, 'eval_runtime': 38.5554, 'eval_samples_per_second': 51.873, 'eval_steps_per_second': 1.634, 'epoch': 1.0}
+{'loss': 1.3653, 'grad_norm': 0.7048562169075012, 'learning_rate': 1.6e-09, 'epoch': 2.0}
+Using default tokenizer.
+{'eval_loss': 1.456396460533142, 'eval_bleu': 29.7515, 'eval_rougeL': 0.513, 'eval_chrf': 51.3164, 'eval_gen_len': 15.407, 'eval_runtime': 38.6578, 'eval_samples_per_second': 51.736, 'eval_steps_per_second': 1.63, 'epoch': 2.0}
+{'train_runtime': 7607.1346, 'train_samples_per_second': 262.911, 'train_steps_per_second': 8.216, 'train_loss': 1.394581375, 'epoch': 2.0}
+/home/alumno.upv.es/gdipal1/MachineTranslation-UPV/A2-CourseworkNeuralModels/experiments_nllb.py:293: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Seq2SeqTrainer.__init__`. Use `processing_class` instead.
+  return Seq2SeqTrainer(
+{'loss': 1.8509, 'grad_norm': 0.060625676065683365, 'learning_rate': 5.0001600000000006e-05, 'epoch': 1.0}
+Using default tokenizer.
+{'eval_loss': 1.6951472759246826, 'eval_bleu': 20.6666, 'eval_rougeL': 0.4508, 'eval_chrf': 49.2268, 'eval_gen_len': 19.2465, 'eval_runtime': 70.9908, 'eval_samples_per_second': 28.173, 'eval_steps_per_second': 0.887, 'epoch': 1.0}
+{'loss': 1.6865, 'grad_norm': 0.11144108325242996, 'learning_rate': 1.6e-09, 'epoch': 2.0}
+Using default tokenizer.
+{'eval_loss': 1.6681196689605713, 'eval_bleu': 20.2913, 'eval_rougeL': 0.4501, 'eval_chrf': 49.0277, 'eval_gen_len': 19.582, 'eval_runtime': 76.9031, 'eval_samples_per_second': 26.007, 'eval_steps_per_second': 0.819, 'epoch': 2.0}
+{'train_runtime': 5094.763, 'train_samples_per_second': 392.56, 'train_steps_per_second': 12.267, 'train_loss': 1.768675375, 'epoch': 2.0}
+Batching examples:   0%|          | 0/2000 [00:00<?, ? examples/s]Batching examples:  96%|█████████▌| 1920/2000 [00:00<00:00, 18184.26 examples/s]Batching examples: 100%|██████████| 2000/2000 [00:00<00:00, 17925.10 examples/s]
+Batching examples:   0%|          | 0/2000 [00:00<?, ? examples/s]Batching examples: 100%|██████████| 2000/2000 [00:00<00:00, 22950.23 examples/s]
+Using default tokenizer.
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python experiments_nllb.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+You are using a CUDA device ('NVIDIA L40S') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Using default tokenizer.
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python experiments_nllb.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Using default tokenizer.
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python experiments_nllb.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Using default tokenizer.
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python experiments_nllb.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Using default tokenizer.
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python experiments_nllb.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Using default tokenizer.
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python experiments_nllb.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+The following generation flags are not valid and may be ignored: ['early_stopping']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Using default tokenizer.
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python experiments_nllb.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Using default tokenizer.
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python experiments_nllb.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Using default tokenizer.
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python experiments_nllb.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Using default tokenizer.
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python experiments_nllb.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Using default tokenizer.
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python experiments_nllb.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Using default tokenizer.
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python experiments_nllb.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Model  Finetuned      LR PEFT Decoding    BLEU   COMET  ROUGE-L    chrF  ΔBLEU  ΔROUGE-L  ΔchrF  ΔCOMET
+ NLLB       True 0.00005  NaN   Beam 4 30.7443 74.0946   0.5201 52.2894 2.1998    0.0166 1.1439  0.7274
+ NLLB       True 0.00010  NaN   Beam 4 30.7864 74.1214   0.5203 52.3425 2.2419    0.0168 1.1970  0.7542
+ NLLB      False     NaN  NaN   Beam 4 28.5445 73.3672   0.5035 51.1455 0.0000    0.0000 0.0000  0.0000
+ NLLB       True 0.00005  NaN   Greedy 29.7208 73.4611   0.5130 51.6042 2.9456    0.0223 1.4381  1.1308
+ NLLB       True 0.00010  NaN   Greedy 29.8106 73.4609   0.5148 51.8654 3.0354    0.0241 1.6993  1.1306
+ NLLB      False     NaN  NaN   Greedy 26.7752 72.3303   0.4907 50.1661 0.0000    0.0000 0.0000  0.0000
+Model  Finetuned  LR   PEFT Decoding    BLEU   COMET  ROUGE-L    chrF   ΔBLEU  ΔROUGE-L   ΔchrF  ΔCOMET
+MBART       True NaN   Lora   Beam 4 29.2699 73.3031   0.5157 51.0289  2.5920    0.0271  1.6432  1.1413
+MBART       True NaN Prefix   Beam 4 26.2149 70.6570   0.4852 48.7410 -0.4630   -0.0034 -0.6447 -1.5048
+MBART      False NaN   Lora   Beam 4 26.6779 72.1618   0.4886 49.3857  0.0000    0.0000  0.0000  0.0000
+MBART       True NaN   Lora   Greedy 29.1395 72.8732   0.5091 50.6071  3.3475    0.0315  2.0720  1.8187
+MBART       True NaN Prefix   Greedy 25.4716 69.4798   0.4726 47.7818 -0.3204   -0.0050 -0.7533 -1.5747
+MBART      False NaN   Lora   Greedy 25.7920 71.0545   0.4776 48.5351  0.0000    0.0000  0.0000  0.0000
