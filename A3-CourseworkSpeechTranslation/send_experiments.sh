@@ -33,7 +33,7 @@ if [ "$EXPERIMENT" = "asr_baseline" ]; then
     python -u ASR_Baseline.py
 
 elif [ "$EXPERIMENT" = "st_baseline" ]; then
-    echo "TODO"
+    python -u ST_Baseline.py
 elif [ "$EXPERIMENT" = "st_cascade_baseline" ]; then
     echo "TODO"
 elif [ "$EXPERIMENT" = "st_cascade_finetuned" ]; then
