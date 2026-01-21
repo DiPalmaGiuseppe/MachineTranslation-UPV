@@ -27,16 +27,17 @@ print(raw_datasets)
 
 # %%
 # data_to_evaluate = raw_datasets["validation"].select(range(10))
-data_to_evaluate = raw_datasets["validation"] 
+data_to_evaluate = raw_datasets["validation"]
 
 def evaluate_model(model, model_name, dataset):
     
     print(f"Evaluating model: {model_name}")
     
     sample = {
+        "sentence": [],
         "hypothesis_simple": [],
         "hypothesis_traditional": [],
-        "sentence": [],
+        "translation": [],
         "training_time": 0
     }
 
@@ -52,10 +53,11 @@ def evaluate_model(model, model_name, dataset):
         # Conversione e pulizia
         hyp_simp = cc.convert(hyp_tr).strip()
         ref_clean = ref.strip()
-        
+
+        sample["sentence"].append(ref_clean)        
         sample["hypothesis_simple"].append(hyp_simp)
         sample["hypothesis_traditional"].append(hyp_tr)
-        sample["sentence"].append(ref_clean)
+        sample["translation"].append(s["translation"].strip())
     
     sample["training_time"] = time.time() - t_start
     
@@ -83,6 +85,7 @@ for model_name, sample in samples:
     sample["clean_sentence"] = [normalizer(text).strip() for text in sample["sentence"]]
     sample["clean_hypothesis_traditional"] = [normalizer(text).strip() for text in sample["hypothesis_traditional"]]
     sample["clean_hypothesis_simple"] = [normalizer(text).strip() for text in sample["hypothesis_simple"]]
+    sample["clean_translation"] = [normalizer(text).strip() for text in sample["translation"]]
     
     # Calcolo CER (quello che hai già fatto, carattere per carattere)
     refs_char = [" ".join(list(normalizer(text))) for text in sample["sentence"]]
@@ -107,9 +110,11 @@ for model_name, sample in samples:
         "sentence",
         "hypothesis_simple",
         "hypothesis_traditional",
+        "translation",
         "clean_sentence",
         "clean_hypothesis_simple",
         "clean_hypothesis_traditional",
+        "clean_translation",
         "training_time"
     ]
 

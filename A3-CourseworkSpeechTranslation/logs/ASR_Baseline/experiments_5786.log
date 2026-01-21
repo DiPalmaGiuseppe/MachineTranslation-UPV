@@ -1,0 +1,49 @@
+Running experiment: asr_baseline
+Python: /home/alumno.upv.es/gdipal1/envs/ta-project/bin/python
+PyTorch version: 2.9.1+cu128
+CUDA available: True
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Whisper model device: cuda:0
+DatasetDict({
+    validation: Dataset({
+        features: ['client_id', 'file', 'audio', 'sentence', 'translation', 'id'],
+        num_rows: 4843
+    })
+    test: Dataset({
+        features: ['client_id', 'file', 'audio', 'sentence', 'translation', 'id'],
+        num_rows: 4898
+    })
+    train: Dataset({
+        features: ['client_id', 'file', 'audio', 'sentence', 'translation', 'id'],
+        num_rows: 7085
+    })
+})
+Evaluating model: base
+Evaluating model: medium
+Evaluating model: large
+
+--- Analysis for Whisper base ---
+Training time: 1635.73 seconds
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.379 seconds.
+Prefix dict has been built successfully.
+CER (Character-level Traditional): 46.65 %
+CER (Character-level Simplified): 30.51 %
+WER (Word-level Traditional with Jieba): 71.04 %
+WER (Word-level Simplified with Jieba): 48.73 %
+
+--- Analysis for Whisper medium ---
+Training time: 2808.96 seconds
+CER (Character-level Traditional): 25.12 %
+CER (Character-level Simplified): 14.53 %
+WER (Word-level Traditional with Jieba): 43.22 %
+WER (Word-level Simplified with Jieba): 26.07 %
+
+--- Analysis for Whisper large ---
+Training time: 2898.91 seconds
+CER (Character-level Traditional): 13.91 %
+CER (Character-level Simplified): 12.09 %
+WER (Word-level Traditional with Jieba): 25.08 %
+WER (Word-level Simplified with Jieba): 22.10 %
