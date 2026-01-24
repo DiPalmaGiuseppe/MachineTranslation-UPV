@@ -1,0 +1,199 @@
+Running experiment: st_cascade_baseline
+Python: /home/alumno.upv.es/gdipal1/envs/ta-project/bin/python
+PyTorch version: 2.9.1+cu128
+CUDA available: True
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/torchmetrics/utilities/imports.py:23: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import DistributionNotFound, get_distribution
+
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]
+Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 92794.34it/s]
+Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`
+Encoder model frozen.
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:197: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']
+DatasetDict({
+    train: Dataset({
+        features: ['sentence', 'hypothesis_simple', 'hypothesis_traditional', 'translation', 'clean_sentence', 'clean_hypothesis_simple', 'clean_hypothesis_traditional', 'clean_translation', 'training_time'],
+        num_rows: 4840
+    })
+})
+
+Map:   0%|          | 0/4840 [00:00<?, ? examples/s]
+Map:  21%|██        | 1000/4840 [00:00<00:00, 5039.10 examples/s]
+Map:  41%|████▏     | 2000/4840 [00:00<00:00, 6012.20 examples/s]
+Map:  62%|██████▏   | 3000/4840 [00:00<00:00, 5975.02 examples/s]
+Map:  83%|████████▎ | 4000/4840 [00:00<00:00, 5469.91 examples/s]
+Map: 100%|██████████| 4840/4840 [00:00<00:00, 5568.25 examples/s]
+Map: 100%|██████████| 4840/4840 [00:00<00:00, 5471.90 examples/s]
+
+Map:   0%|          | 0/4840 [00:00<?, ? examples/s]
+Map:  21%|██        | 1000/4840 [00:00<00:00, 5725.60 examples/s]
+Map:  41%|████▏     | 2000/4840 [00:00<00:00, 6115.91 examples/s]
+Map:  62%|██████▏   | 3000/4840 [00:00<00:00, 6297.96 examples/s]
+Map:  83%|████████▎ | 4000/4840 [00:00<00:00, 5887.38 examples/s]
+Map: 100%|██████████| 4840/4840 [00:00<00:00, 5674.68 examples/s]
+Map: 100%|██████████| 4840/4840 [00:00<00:00, 5680.36 examples/s]
+
+Map:   0%|          | 0/4840 [00:00<?, ? examples/s]
+Map:  21%|██        | 1000/4840 [00:00<00:00, 7041.07 examples/s]
+Map:  41%|████▏     | 2000/4840 [00:00<00:01, 2100.51 examples/s]
+Map:  62%|██████▏   | 3000/4840 [00:01<00:00, 2841.72 examples/s]
+Map:  83%|████████▎ | 4000/4840 [00:01<00:00, 3537.12 examples/s]
+Map: 100%|██████████| 4840/4840 [00:01<00:00, 4248.04 examples/s]
+Map: 100%|██████████| 4840/4840 [00:01<00:00, 3562.56 examples/s]
+
+Map:   0%|          | 0/4840 [00:00<?, ? examples/s]
+Map:  21%|██        | 1000/4840 [00:00<00:00, 7450.98 examples/s]
+Map:  41%|████▏     | 2000/4840 [00:00<00:00, 7208.44 examples/s]
+Map:  62%|██████▏   | 3000/4840 [00:00<00:00, 7334.44 examples/s]
+Map:  83%|████████▎ | 4000/4840 [00:00<00:00, 7411.69 examples/s]
+Map: 100%|██████████| 4840/4840 [00:00<00:00, 7028.88 examples/s]
+Map: 100%|██████████| 4840/4840 [00:00<00:00, 7081.13 examples/s]
+
+Map:   0%|          | 0/4840 [00:00<?, ? examples/s]
+Map:  21%|██        | 1000/4840 [00:00<00:00, 5886.39 examples/s]
+Map:  41%|████▏     | 2000/4840 [00:00<00:00, 5607.72 examples/s]
+Map:  62%|██████▏   | 3000/4840 [00:00<00:00, 5441.26 examples/s]
+Map:  83%|████████▎ | 4000/4840 [00:00<00:00, 5225.93 examples/s]
+Map: 100%|██████████| 4840/4840 [00:00<00:00, 4946.85 examples/s]
+Map: 100%|██████████| 4840/4840 [00:00<00:00, 5117.92 examples/s]
+
+Map:   0%|          | 0/4840 [00:00<?, ? examples/s]
+Map:  21%|██        | 1000/4840 [00:00<00:00, 4848.36 examples/s]
+Map:  41%|████▏     | 2000/4840 [00:00<00:00, 4426.77 examples/s]
+Map:  62%|██████▏   | 3000/4840 [00:00<00:00, 4509.90 examples/s]
+Map:  83%|████████▎ | 4000/4840 [00:00<00:00, 4656.33 examples/s]
+Map: 100%|██████████| 4840/4840 [00:01<00:00, 4893.35 examples/s]
+Map: 100%|██████████| 4840/4840 [00:01<00:00, 4681.49 examples/s]
+
+Map:   0%|          | 0/4840 [00:00<?, ? examples/s]
+Map:  21%|██        | 1000/4840 [00:00<00:01, 2532.57 examples/s]
+Map:  41%|████▏     | 2000/4840 [00:00<00:00, 3917.80 examples/s]
+Map:  62%|██████▏   | 3000/4840 [00:00<00:00, 4899.49 examples/s]
+Map:  83%|████████▎ | 4000/4840 [00:00<00:00, 5620.73 examples/s]
+Map: 100%|██████████| 4840/4840 [00:00<00:00, 6029.38 examples/s]
+Map: 100%|██████████| 4840/4840 [00:00<00:00, 4994.41 examples/s]
+
+Map:   0%|          | 0/4840 [00:00<?, ? examples/s]
+Map:  21%|██        | 1000/4840 [00:00<00:00, 7309.58 examples/s]
+Map:  41%|████▏     | 2000/4840 [00:00<00:00, 7197.32 examples/s]
+Map:  62%|██████▏   | 3000/4840 [00:00<00:00, 6693.24 examples/s]
+Map:  83%|████████▎ | 4000/4840 [00:00<00:00, 7040.18 examples/s]
+Map: 100%|██████████| 4840/4840 [00:00<00:00, 7102.91 examples/s]
+Map: 100%|██████████| 4840/4840 [00:00<00:00, 6928.90 examples/s]
+We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Evaluating model: nllb_simple with num_beams=1
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Baseline.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+You are using a CUDA device ('NVIDIA L40S') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+{'bleu': 17.763133284449452, 'comet': 68.74226238609346}
+Evaluating model: nllb_simple with num_beams=4
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Baseline.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+{'bleu': 18.771531071820913, 'comet': 69.66425790890189}
+Evaluating model: nllb_trad with num_beams=1
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Baseline.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+{'bleu': 17.73468834986108, 'comet': 68.79537723188804}
+Evaluating model: nllb_trad with num_beams=4
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Baseline.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+{'bleu': 18.699265766625814, 'comet': 69.73254361705592}
+Evaluating model: mbart_simple with num_beams=1
+The following generation flags are not valid and may be ignored: ['early_stopping']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Baseline.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+{'bleu': 15.550336625771017, 'comet': 66.33901821618731}
+Evaluating model: mbart_simple with num_beams=4
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Baseline.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+{'bleu': 12.553176134993658, 'comet': 62.74795969501753}
+Evaluating model: mbart_trad with num_beams=1
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Baseline.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+{'bleu': 15.4005604581768, 'comet': 66.14253951960113}
+Evaluating model: mbart_trad with num_beams=4
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Baseline.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+{'bleu': 12.29677101950231, 'comet': 62.42530915763014}
+Evaluating model: nllb_simple_clean with num_beams=1
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Baseline.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+{'bleu': 17.972122165674705, 'comet': 68.81594999485519}
+Evaluating model: nllb_simple_clean with num_beams=4
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Baseline.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+{'bleu': 18.929002910347904, 'comet': 69.6584077675111}
+Evaluating model: nllb_trad_clean with num_beams=1
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Baseline.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+{'bleu': 17.900186207008378, 'comet': 68.85731885409798}
+Evaluating model: nllb_trad_clean with num_beams=4
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Baseline.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+{'bleu': 18.869760861916276, 'comet': 69.7499143045919}
+Evaluating model: mbart_simple_clean with num_beams=1
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Baseline.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+{'bleu': 14.223520710554066, 'comet': 65.04658092429077}
+Evaluating model: mbart_simple_clean with num_beams=4
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Baseline.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+{'bleu': 10.823486493719765, 'comet': 61.35215745761621}
+Evaluating model: mbart_trad_clean with num_beams=1
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Baseline.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+{'bleu': 14.035718714762755, 'comet': 64.80716918926102}
+Evaluating model: mbart_trad_clean with num_beams=4
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Baseline.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+{'bleu': 10.598802985707051, 'comet': 61.031333949139785}
+Results saved to cascade_baseline.csv

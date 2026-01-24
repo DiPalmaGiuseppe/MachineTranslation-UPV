@@ -35,9 +35,9 @@ if [ "$EXPERIMENT" = "asr_baseline" ]; then
 elif [ "$EXPERIMENT" = "st_baseline" ]; then
     python -u ST_Baseline.py
 elif [ "$EXPERIMENT" = "st_cascade_baseline" ]; then
-    echo "TODO"
+    python -u ST_Cascade_Baseline.py
 elif [ "$EXPERIMENT" = "st_cascade_finetuned" ]; then
-    echo "TODO"
+    python -u ST_Cascade_Finetuned.py
 
 else
     echo "ERROR: Unknown experiment '$EXPERIMENT'"
