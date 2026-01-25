@@ -12,7 +12,7 @@
 # -------------------------
 if [ -z "$1" ]; then
     echo "ERROR: No experiment specified."
-    echo "Usage: sbatch send_experiments.sh [nllb|llama]"
+    echo "Usage: sbatch send_experiments.sh [nllb|llama|opt]"
     exit 1
 fi
 
@@ -35,8 +35,11 @@ if [ "$EXPERIMENT" = "nllb" ]; then
 elif [ "$EXPERIMENT" = "llama" ]; then
     python -u experiments_llama.py
 
+elif [ "$EXPERIMENT" = "opt" ]; then
+    python -u experiments_opt.py
+
 else
     echo "ERROR: Unknown experiment '$EXPERIMENT'"
-    echo "Valid options: nllb | llama"
+    echo "Valid options: nllb | llama | opt"
     exit 1
 fi

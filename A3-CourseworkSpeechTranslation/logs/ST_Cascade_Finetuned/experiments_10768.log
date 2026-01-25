@@ -1,0 +1,215 @@
+Running experiment: st_cascade_finetuned
+Python: /home/alumno.upv.es/gdipal1/envs/ta-project/bin/python
+PyTorch version: 2.9.1+cu128
+CUDA available: True
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/torchmetrics/utilities/imports.py:23: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import DistributionNotFound, get_distribution
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 90394.48it/s]
+Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.0. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`
+Encoder model frozen.
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:197: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']
+DatasetDict({
+    train: Dataset({
+        features: ['sentence', 'hypothesis_simple', 'hypothesis_traditional', 'translation', 'clean_sentence', 'clean_hypothesis_simple', 'clean_hypothesis_traditional', 'clean_translation', 'training_time'],
+        num_rows: 3388
+    })
+    validation: Dataset({
+        features: ['sentence', 'hypothesis_simple', 'hypothesis_traditional', 'translation', 'clean_sentence', 'clean_hypothesis_simple', 'clean_hypothesis_traditional', 'clean_translation', 'training_time'],
+        num_rows: 726
+    })
+    test: Dataset({
+        features: ['sentence', 'hypothesis_simple', 'hypothesis_traditional', 'translation', 'clean_sentence', 'clean_hypothesis_simple', 'clean_hypothesis_traditional', 'clean_translation', 'training_time'],
+        num_rows: 726
+    })
+})
+Map:   0%|          | 0/3388 [00:00<?, ? examples/s]Map:  30%|██▉       | 1000/3388 [00:00<00:00, 4919.49 examples/s]Map:  59%|█████▉    | 2000/3388 [00:00<00:00, 6261.73 examples/s]Map:  89%|████████▊ | 3000/3388 [00:00<00:00, 6964.33 examples/s]Map: 100%|██████████| 3388/3388 [00:00<00:00, 6443.36 examples/s]
+Map:   0%|          | 0/726 [00:00<?, ? examples/s]Map: 100%|██████████| 726/726 [00:00<00:00, 7826.44 examples/s]
+Map:   0%|          | 0/726 [00:00<?, ? examples/s]Map: 100%|██████████| 726/726 [00:00<00:00, 7778.36 examples/s]
+Map:   0%|          | 0/3388 [00:00<?, ? examples/s]Map:  30%|██▉       | 1000/3388 [00:00<00:00, 8788.58 examples/s]Map:  59%|█████▉    | 2000/3388 [00:00<00:00, 8586.28 examples/s]Map:  89%|████████▊ | 3000/3388 [00:00<00:00, 8410.07 examples/s]Map: 100%|██████████| 3388/3388 [00:00<00:00, 8118.75 examples/s]
+Map:   0%|          | 0/726 [00:00<?, ? examples/s]Map: 100%|██████████| 726/726 [00:00<00:00, 7819.05 examples/s]
+Map:   0%|          | 0/726 [00:00<?, ? examples/s]Map: 100%|██████████| 726/726 [00:00<00:00, 7717.15 examples/s]
+Map:   0%|          | 0/3388 [00:00<?, ? examples/s]Map:  30%|██▉       | 1000/3388 [00:00<00:00, 8733.46 examples/s]Map:  59%|█████▉    | 2000/3388 [00:00<00:00, 3367.53 examples/s]Map:  89%|████████▊ | 3000/3388 [00:00<00:00, 4623.58 examples/s]Map: 100%|██████████| 3388/3388 [00:00<00:00, 4680.54 examples/s]
+Map:   0%|          | 0/726 [00:00<?, ? examples/s]Map: 100%|██████████| 726/726 [00:00<00:00, 7704.89 examples/s]
+Map:   0%|          | 0/726 [00:00<?, ? examples/s]Map: 100%|██████████| 726/726 [00:00<00:00, 7517.58 examples/s]
+Map:   0%|          | 0/3388 [00:00<?, ? examples/s]Map:  30%|██▉       | 1000/3388 [00:00<00:00, 8459.31 examples/s]Map:  59%|█████▉    | 2000/3388 [00:00<00:00, 8294.86 examples/s]Map:  89%|████████▊ | 3000/3388 [00:00<00:00, 8267.28 examples/s]Map: 100%|██████████| 3388/3388 [00:00<00:00, 7932.02 examples/s]
+Map:   0%|          | 0/726 [00:00<?, ? examples/s]Map: 100%|██████████| 726/726 [00:00<00:00, 7535.27 examples/s]
+Map:   0%|          | 0/726 [00:00<?, ? examples/s]Map: 100%|██████████| 726/726 [00:00<00:00, 7308.34 examples/s]
+Evaluating model: mbart_simple_lora with num_beams=1
+We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+trainable params: 2,359,296 || all params: 613,238,784 || trainable%: 0.3847
+/home/alumno.upv.es/gdipal1/MachineTranslation-UPV/A3-CourseworkSpeechTranslation/ST_Cascade_Finetuned.py:249: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Seq2SeqTrainer.__init__`. Use `processing_class` instead.
+  trainer = Seq2SeqTrainer(
+ ---- Training Phase ---- 
+{'loss': 10.0363, 'grad_norm': 0.14998018741607666, 'learning_rate': 8.82172373081464e-05, 'epoch': 0.5903187721369539}
+{'loss': 9.8941, 'grad_norm': 0.08401626348495483, 'learning_rate': 7.641086186540733e-05, 'epoch': 1.1806375442739079}
+{'loss': 9.8827, 'grad_norm': 0.09028748422861099, 'learning_rate': 6.460448642266824e-05, 'epoch': 1.770956316410862}
+{'loss': 9.8739, 'grad_norm': 0.14476969838142395, 'learning_rate': 5.279811097992916e-05, 'epoch': 2.3612750885478158}
+{'loss': 9.8793, 'grad_norm': 0.14959733188152313, 'learning_rate': 4.099173553719008e-05, 'epoch': 2.9515938606847696}
+{'loss': 9.8717, 'grad_norm': 0.1043907180428505, 'learning_rate': 2.9185360094451e-05, 'epoch': 3.541912632821724}
+{'loss': 9.8686, 'grad_norm': 0.11097423732280731, 'learning_rate': 1.7378984651711924e-05, 'epoch': 4.132231404958677}
+{'loss': 9.8629, 'grad_norm': 0.14872030913829803, 'learning_rate': 5.5726092089728455e-06, 'epoch': 4.7225501770956315}
+{'train_runtime': 603.6635, 'train_samples_per_second': 28.062, 'train_steps_per_second': 7.015, 'train_loss': 9.894808826649204, 'epoch': 5.0}
+ ---- Evaluation Phase ---- 
+The following generation flags are not valid and may be ignored: ['early_stopping']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Finetuned.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+You are using a CUDA device ('NVIDIA L40S') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [2]
+{'bleu': 1.4811243657281923, 'comet': 20.312721627063986}
+Evaluating model: mbart_simple_ia3 with num_beams=1
+We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+trainable params: 270,336 || all params: 611,149,824 || trainable%: 0.0442
+/home/alumno.upv.es/gdipal1/MachineTranslation-UPV/A3-CourseworkSpeechTranslation/ST_Cascade_Finetuned.py:249: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Seq2SeqTrainer.__init__`. Use `processing_class` instead.
+  trainer = Seq2SeqTrainer(
+ ---- Training Phase ---- 
+{'loss': 10.6937, 'grad_norm': 0.1934625208377838, 'learning_rate': 8.82172373081464e-05, 'epoch': 0.5903187721369539}
+{'loss': 10.3555, 'grad_norm': 0.10398058593273163, 'learning_rate': 7.641086186540733e-05, 'epoch': 1.1806375442739079}
+{'loss': 10.2344, 'grad_norm': 0.05774284154176712, 'learning_rate': 6.460448642266824e-05, 'epoch': 1.770956316410862}
+{'loss': 10.1705, 'grad_norm': 0.05282425880432129, 'learning_rate': 5.279811097992916e-05, 'epoch': 2.3612750885478158}
+{'loss': 10.1432, 'grad_norm': 0.04584178701043129, 'learning_rate': 4.099173553719008e-05, 'epoch': 2.9515938606847696}
+{'loss': 10.115, 'grad_norm': 0.035540614277124405, 'learning_rate': 2.9185360094451e-05, 'epoch': 3.541912632821724}
+{'loss': 10.0961, 'grad_norm': 0.035432491451501846, 'learning_rate': 1.7378984651711924e-05, 'epoch': 4.132231404958677}
+{'loss': 10.0852, 'grad_norm': 0.039883166551589966, 'learning_rate': 5.5726092089728455e-06, 'epoch': 4.7225501770956315}
+{'train_runtime': 597.4851, 'train_samples_per_second': 28.352, 'train_steps_per_second': 7.088, 'train_loss': 10.228500175250886, 'epoch': 5.0}
+ ---- Evaluation Phase ---- 
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Finetuned.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [2]
+{'bleu': 11.352104250022872, 'comet': 65.97003768462451}
+Evaluating model: mbart_trad_lora with num_beams=1
+We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+trainable params: 2,359,296 || all params: 613,238,784 || trainable%: 0.3847
+/home/alumno.upv.es/gdipal1/MachineTranslation-UPV/A3-CourseworkSpeechTranslation/ST_Cascade_Finetuned.py:249: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Seq2SeqTrainer.__init__`. Use `processing_class` instead.
+  trainer = Seq2SeqTrainer(
+ ---- Training Phase ---- 
+{'loss': 10.036, 'grad_norm': 0.1455577313899994, 'learning_rate': 8.82172373081464e-05, 'epoch': 0.5903187721369539}
+{'loss': 9.8947, 'grad_norm': 0.08907239139080048, 'learning_rate': 7.641086186540733e-05, 'epoch': 1.1806375442739079}
+{'loss': 9.8828, 'grad_norm': 0.09611254930496216, 'learning_rate': 6.460448642266824e-05, 'epoch': 1.770956316410862}
+{'loss': 9.8745, 'grad_norm': 0.1556365191936493, 'learning_rate': 5.279811097992916e-05, 'epoch': 2.3612750885478158}
+{'loss': 9.8799, 'grad_norm': 0.15442490577697754, 'learning_rate': 4.099173553719008e-05, 'epoch': 2.9515938606847696}
+{'loss': 9.8724, 'grad_norm': 0.10442934185266495, 'learning_rate': 2.9185360094451e-05, 'epoch': 3.541912632821724}
+{'loss': 9.869, 'grad_norm': 0.12796951830387115, 'learning_rate': 1.7378984651711924e-05, 'epoch': 4.132231404958677}
+{'loss': 9.8634, 'grad_norm': 0.15046672523021698, 'learning_rate': 5.5726092089728455e-06, 'epoch': 4.7225501770956315}
+{'train_runtime': 592.7928, 'train_samples_per_second': 28.577, 'train_steps_per_second': 7.144, 'train_loss': 9.895213863728602, 'epoch': 5.0}
+ ---- Evaluation Phase ---- 
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Finetuned.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [2]
+{'bleu': 2.665983132454851, 'comet': 30.103409269788706}
+Evaluating model: mbart_trad_ia3 with num_beams=1
+We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+trainable params: 270,336 || all params: 611,149,824 || trainable%: 0.0442
+/home/alumno.upv.es/gdipal1/MachineTranslation-UPV/A3-CourseworkSpeechTranslation/ST_Cascade_Finetuned.py:249: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Seq2SeqTrainer.__init__`. Use `processing_class` instead.
+  trainer = Seq2SeqTrainer(
+ ---- Training Phase ---- 
+{'loss': 10.6925, 'grad_norm': 0.19650329649448395, 'learning_rate': 8.82172373081464e-05, 'epoch': 0.5903187721369539}
+{'loss': 10.3547, 'grad_norm': 0.09990214556455612, 'learning_rate': 7.641086186540733e-05, 'epoch': 1.1806375442739079}
+{'loss': 10.2335, 'grad_norm': 0.05761077255010605, 'learning_rate': 6.460448642266824e-05, 'epoch': 1.770956316410862}
+{'loss': 10.1701, 'grad_norm': 0.05213984102010727, 'learning_rate': 5.279811097992916e-05, 'epoch': 2.3612750885478158}
+{'loss': 10.1429, 'grad_norm': 0.04644026979804039, 'learning_rate': 4.099173553719008e-05, 'epoch': 2.9515938606847696}
+{'loss': 10.1145, 'grad_norm': 0.03587973490357399, 'learning_rate': 2.9185360094451e-05, 'epoch': 3.541912632821724}
+{'loss': 10.0959, 'grad_norm': 0.03555029258131981, 'learning_rate': 1.7378984651711924e-05, 'epoch': 4.132231404958677}
+{'loss': 10.0849, 'grad_norm': 0.03833310678601265, 'learning_rate': 5.5726092089728455e-06, 'epoch': 4.7225501770956315}
+{'train_runtime': 597.6592, 'train_samples_per_second': 28.344, 'train_steps_per_second': 7.086, 'train_loss': 10.227924037964875, 'epoch': 5.0}
+ ---- Evaluation Phase ---- 
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Finetuned.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [2]
+{'bleu': 11.230516906834293, 'comet': 65.3073028817814}
+Evaluating model: nllb_simple_clean_beam1 with num_beams=1
+We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+trainable params: 2,359,296 || all params: 617,433,088 || trainable%: 0.3821
+/home/alumno.upv.es/gdipal1/MachineTranslation-UPV/A3-CourseworkSpeechTranslation/ST_Cascade_Finetuned.py:249: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Seq2SeqTrainer.__init__`. Use `processing_class` instead.
+  trainer = Seq2SeqTrainer(
+ ---- Training Phase ---- 
+{'loss': 8.8677, 'grad_norm': 0.22354008257389069, 'learning_rate': 8.82172373081464e-05, 'epoch': 0.5903187721369539}
+{'loss': 7.4712, 'grad_norm': 0.15836775302886963, 'learning_rate': 7.641086186540733e-05, 'epoch': 1.1806375442739079}
+{'loss': 7.4049, 'grad_norm': 0.11444161087274551, 'learning_rate': 6.460448642266824e-05, 'epoch': 1.770956316410862}
+{'loss': 7.3785, 'grad_norm': 0.10339083522558212, 'learning_rate': 5.279811097992916e-05, 'epoch': 2.3612750885478158}
+{'loss': 7.3685, 'grad_norm': 0.4188999533653259, 'learning_rate': 4.099173553719008e-05, 'epoch': 2.9515938606847696}
+{'loss': 7.3546, 'grad_norm': 0.15758825838565826, 'learning_rate': 2.9185360094451e-05, 'epoch': 3.541912632821724}
+{'loss': 7.3498, 'grad_norm': 0.07620760798454285, 'learning_rate': 1.7378984651711924e-05, 'epoch': 4.132231404958677}
+{'loss': 7.345, 'grad_norm': 0.08815741539001465, 'learning_rate': 5.5726092089728455e-06, 'epoch': 4.7225501770956315}
+{'train_runtime': 593.5278, 'train_samples_per_second': 28.541, 'train_steps_per_second': 7.135, 'train_loss': 7.5554328639223, 'epoch': 5.0}
+ ---- Evaluation Phase ---- 
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Finetuned.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [2]
+{'bleu': 15.779525848128301, 'comet': 69.41108201160904}
+Evaluating model: nllb_simple_clean_beam4 with num_beams=4
+We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+trainable params: 2,359,296 || all params: 617,433,088 || trainable%: 0.3821
+/home/alumno.upv.es/gdipal1/MachineTranslation-UPV/A3-CourseworkSpeechTranslation/ST_Cascade_Finetuned.py:249: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Seq2SeqTrainer.__init__`. Use `processing_class` instead.
+  trainer = Seq2SeqTrainer(
+ ---- Training Phase ---- 
+{'loss': 8.8553, 'grad_norm': 0.2299279123544693, 'learning_rate': 8.82172373081464e-05, 'epoch': 0.5903187721369539}
+{'loss': 7.47, 'grad_norm': 0.18284374475479126, 'learning_rate': 7.641086186540733e-05, 'epoch': 1.1806375442739079}
+{'loss': 7.4044, 'grad_norm': 0.12682226300239563, 'learning_rate': 6.460448642266824e-05, 'epoch': 1.770956316410862}
+{'loss': 7.3775, 'grad_norm': 0.14225895702838898, 'learning_rate': 5.279811097992916e-05, 'epoch': 2.3612750885478158}
+{'loss': 7.3682, 'grad_norm': 0.2516557574272156, 'learning_rate': 4.099173553719008e-05, 'epoch': 2.9515938606847696}
+{'loss': 7.3546, 'grad_norm': 0.07992934435606003, 'learning_rate': 2.9185360094451e-05, 'epoch': 3.541912632821724}
+{'loss': 7.3506, 'grad_norm': 0.07884875684976578, 'learning_rate': 1.7378984651711924e-05, 'epoch': 4.132231404958677}
+{'loss': 7.3463, 'grad_norm': 0.08693873882293701, 'learning_rate': 5.5726092089728455e-06, 'epoch': 4.7225501770956315}
+{'train_runtime': 592.2012, 'train_samples_per_second': 28.605, 'train_steps_per_second': 7.151, 'train_loss': 7.5539036846498675, 'epoch': 5.0}
+ ---- Evaluation Phase ---- 
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Finetuned.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [2]
+{'bleu': 15.32805877188483, 'comet': 69.67967210681314}
+Evaluating model: nllb_trad_clean_beam1 with num_beams=1
+We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+trainable params: 2,359,296 || all params: 617,433,088 || trainable%: 0.3821
+/home/alumno.upv.es/gdipal1/MachineTranslation-UPV/A3-CourseworkSpeechTranslation/ST_Cascade_Finetuned.py:249: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Seq2SeqTrainer.__init__`. Use `processing_class` instead.
+  trainer = Seq2SeqTrainer(
+ ---- Training Phase ---- 
+{'loss': 8.8503, 'grad_norm': 0.2325618714094162, 'learning_rate': 8.82172373081464e-05, 'epoch': 0.5903187721369539}
+{'loss': 7.4684, 'grad_norm': 0.1741330623626709, 'learning_rate': 7.641086186540733e-05, 'epoch': 1.1806375442739079}
+{'loss': 7.4033, 'grad_norm': 0.37374183535575867, 'learning_rate': 6.460448642266824e-05, 'epoch': 1.770956316410862}
+{'loss': 7.3761, 'grad_norm': 0.09929253906011581, 'learning_rate': 5.279811097992916e-05, 'epoch': 2.3612750885478158}
+{'loss': 7.3674, 'grad_norm': 0.49948713183403015, 'learning_rate': 4.099173553719008e-05, 'epoch': 2.9515938606847696}
+{'loss': 7.3541, 'grad_norm': 0.08183758705854416, 'learning_rate': 2.9185360094451e-05, 'epoch': 3.541912632821724}
+{'loss': 7.3494, 'grad_norm': 0.07527101039886475, 'learning_rate': 1.7378984651711924e-05, 'epoch': 4.132231404958677}
+{'loss': 7.345, 'grad_norm': 0.08258213102817535, 'learning_rate': 5.5726092089728455e-06, 'epoch': 4.7225501770956315}
+{'train_runtime': 593.7482, 'train_samples_per_second': 28.531, 'train_steps_per_second': 7.133, 'train_loss': 7.552364215152745, 'epoch': 5.0}
+ ---- Evaluation Phase ---- 
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Finetuned.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [2]
+{'bleu': 15.064806991194077, 'comet': 69.38307520730764}
+Evaluating model: nllb_trad_clean_beam4 with num_beams=4
+We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+trainable params: 2,359,296 || all params: 617,433,088 || trainable%: 0.3821
+/home/alumno.upv.es/gdipal1/MachineTranslation-UPV/A3-CourseworkSpeechTranslation/ST_Cascade_Finetuned.py:249: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Seq2SeqTrainer.__init__`. Use `processing_class` instead.
+  trainer = Seq2SeqTrainer(
+ ---- Training Phase ---- 
+{'loss': 8.8561, 'grad_norm': 0.2545376420021057, 'learning_rate': 8.82172373081464e-05, 'epoch': 0.5903187721369539}
+{'loss': 7.4692, 'grad_norm': 0.14757657051086426, 'learning_rate': 7.641086186540733e-05, 'epoch': 1.1806375442739079}
+{'loss': 7.4028, 'grad_norm': 0.12674103677272797, 'learning_rate': 6.460448642266824e-05, 'epoch': 1.770956316410862}
+{'loss': 7.3757, 'grad_norm': 0.10413146018981934, 'learning_rate': 5.279811097992916e-05, 'epoch': 2.3612750885478158}
+{'loss': 7.3687, 'grad_norm': 0.2664429843425751, 'learning_rate': 4.099173553719008e-05, 'epoch': 2.9515938606847696}
+{'loss': 7.3538, 'grad_norm': 0.10600635409355164, 'learning_rate': 2.9185360094451e-05, 'epoch': 3.541912632821724}
+{'loss': 7.3495, 'grad_norm': 0.07760144025087357, 'learning_rate': 1.7378984651711924e-05, 'epoch': 4.132231404958677}
+{'loss': 7.3453, 'grad_norm': 0.08919963240623474, 'learning_rate': 5.5726092089728455e-06, 'epoch': 4.7225501770956315}
+{'train_runtime': 594.1036, 'train_samples_per_second': 28.514, 'train_steps_per_second': 7.128, 'train_loss': 7.55318267714175, 'epoch': 5.0}
+ ---- Evaluation Phase ---- 
+/home/alumno.upv.es/gdipal1/envs/ta-project/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python ST_Cascade_Finetuned.py ...
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [2]
+{'bleu': 15.713935268664809, 'comet': 70.06147493179836}
+Results saved to cascade_finetuned.csv
