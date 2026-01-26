@@ -1,0 +1,7 @@
+BLEU,rogueL,COMET,chrF,gen_len,model_name,num_beams
+8.4476,0.2645,58.8205,33.4474,1.0,llama_1shot_1beams,1
+12.9064,0.3327,62.1615,39.2587,1.0,llama_1shot_4beams,4
+5.8097,0.1981,54.1884,26.9265,1.0,llama_5shot_1beams,1
+10.9747,0.2857,58.6041,34.741,1.0,llama_5shot_4beams,4
+6.6348,0.2259,59.4581,28.4411,1.0,llama_10shot_1beams,1
+12.8898,0.3245,63.6231,38.0228,1.0,llama_10shot_4beams,4
