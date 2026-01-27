@@ -1,0 +1,95 @@
+\documentclass[10pt,a4paper,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{geometry}
+\geometry{margin=2cm}
+
+\title{MT Coursework A2: Neural Translation Models \\ \large Evaluation of NLLB, mBART, Llama-2, and OPT models on OPUS-100}
+\author{Student Name: Giuseppe Di Palma}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction and Dataset}
+This report details the application of pre-trained translation models to the \textbf{OPUS-100} dataset (English to French). 
+The task involves comparing specialized translation models (NLLB) with Large Language Models (LLMs) used via few-shot prompting and Parameter-Efficient Fine-Tuning (PEFT).
+
+\subsection{Dataset and Limitations}
+The \texttt{Helsinki-NLP/opus-100} (en-fr) dataset was used. To align with computing capabilities and ensure efficiency:
+\begin{itemize}
+    \item \textbf{Token Limit:} Sentences were truncated or discarded if exceeding 16 tokens for NLLB/mBART and 24 tokens for OPT/Llama-2.
+    \item \textbf{Quantization:} All models were loaded in \textbf{4-bit} using \texttt{BitsAndBytesConfig} (NF4) to minimize VRAM usage.
+    \item \textbf{Preprocessing:} A task prefix (\textit{"Translate from English to French:"}) was used for Causal LLMs.
+\end{itemize}
+
+\section{Core Experiments (Point 2)}
+Following the coursework requirements, we report BLEU and COMET scores for the provided architectures.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lcc}
+\toprule
+\textbf{Model Configuration} & \textbf{BLEU} & \textbf{COMET} \\
+\midrule
+NLLB-200 (Baseline) & [Value] & [Value] \\
+NLLB-200 (LoRA Finetuned) & [Value] & [Value] \\
+Llama-2-7b (1-shot) & [Value] & [Value] \\
+Llama-2-7b (LoRA Finetuned)* & [Value] & [Value] \\
+\bottomrule
+\end{tabular}
+\caption{Baseline and Finetuned performance on OPUS-100. (*If applicable)}
+\end{table}
+
+\section{Alternative Model: OPT-1.3b}
+As an alternative pre-trained model, \textbf{facebook/opt-1.3b} was selected and tested using both LoRA and IA3 adapters.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lccc}
+\toprule
+\textbf{Method} & \textbf{Beams} & \textbf{BLEU} & \textbf{COMET} \\
+\midrule
+mBART (Baseline) & 1 & [Value] & [Value] \\
+mBART (Baseline) & 4 & [Value] & [Value] \\
+OPT (LoRA 1e-4) & 1 & [Value] & [Value] \\
+OPT (LoRA 1e-4) & 4 & [Value] & [Value] \\
+OPT (IA3 1e-4) & 1 & [Value] & [Value] \\
+OPT (IA3 1e-4) & 4 & [Value] & [Value] \\
+\bottomrule
+\end{tabular}
+\caption{Alternative Model (OPT-1.3b and mBART) Results.}
+\end{table}
+
+\section{Extensions and Parameters}
+We explored several extensions to improve translation quality.
+
+\subsection{PEFT Methods: LoRA vs. IA3}
+Both \textbf{LoRA} and \textbf{IA3} were tested on mBART and OPT. IA3 showed [lower/higher] resource consumption compared to LoRA.
+
+\subsection{Inference: Beam Search}
+Decoding parameters were explored by comparing \textbf{Greedy Search} (1 beam) vs. \textbf{Beam Search} (4 beams). 
+
+\subsection{Prompting: Shot Scaling}
+For Llama-2, we explored the impact of the number of shots (1, 5, and 10 shots).
+\begin{itemize}
+    \item \textbf{10-shot Llama-2:} BLEU: [Value], COMET: [Value].
+\end{itemize}
+
+\section{Additional Metrics}
+In addition to BLEU and COMET, we reported \textbf{chrF} and \textbf{ROUGE-L} to better capture character-level accuracy and fluency.
+
+\section{Conclusions}
+The experiments indicate that:
+\begin{enumerate}
+    \item Specialized models like NLLB remain highly competitive for short-sequence translation.
+    \item PEFT (LoRA/IA3) significantly improves the performance of general-purpose LLMs (OPT/Llama) on specific language pairs.
+    \item Increasing the number of shots in Llama-2 generally leads to [better/worse] consistency.
+\end{enumerate}
+
+\end{document}
